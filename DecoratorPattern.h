@@ -98,10 +98,14 @@ void TestDecoratorPattern()
 	ConcreteDecoratorSecond *dctScd = new ConcreteDecoratorSecond();
 
 	dctFst->setComponent(conCpt);    //也可以写进构造函数
-	dctScd->setComponent(conCpt);
+	//dctScd->setComponent(conCpt);
+	dctScd->setComponent(dctFst);   //用第一个和第二个装饰。
+
+
 
 	conCpt->operatoration();
 	dctFst->operatoration();
+	cout << "asdasd\n";
 	dctScd->operatoration();
 
 	dctScd->addFoo();

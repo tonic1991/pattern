@@ -64,16 +64,5 @@ void TestSingletonPattern()
 	Singleton *sg1 = Singleton::getInstance();  //第二个实例不会再次调用，而是引用类中的静态实例
 }
 
-
-
-
-
-
-
-
-
-
-
-
 #endif // !_SINGLETONPATTERN_H_
 

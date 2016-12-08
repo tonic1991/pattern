@@ -24,9 +24,9 @@ public :
 class Command
 {
 public:
-	Command(Cooker *cook) { receiver = cook; }
+	Command(Cooker *cook):receiver(cook) { }
 	virtual void excute()=0;
-	~Command(){}
+	virtual ~Command(){}
 protected:
 	Cooker *receiver;
 };
@@ -85,6 +85,10 @@ void TestCommandPattern()
 	//服务员通知
 	girl->notify();
 
+	delete cook;
+	delete meetCmd;
+	delete vegeCamd;
+	delete girl;
 }
 
 
